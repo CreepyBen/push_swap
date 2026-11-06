@@ -6,7 +6,7 @@
 /*   By: ben <ben@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 15:18:22 by ben               #+#    #+#             */
-/*   Updated: 2026/11/05 15:18:23 by ben              ###   ########.fr       */
+/*   Updated: 2026/11/06 12:34:05 by ben              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_node	*remove_front(t_stack *stack)
 	return (head_node);
 }
 
-void	free_node(t_stack *stack)
+void	free_stack(t_stack *stack)
 {
 	t_node	*curr;
 	t_node	*next_node;
@@ -79,7 +79,7 @@ void	free_node(t_stack *stack)
 	if (!stack || !stack->head)
 		return ;
 	curr = stack->head;
-	while (next_node)
+	while (curr)
 	{
 		next_node = curr->next;
 		free(curr);
